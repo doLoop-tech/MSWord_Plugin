@@ -11,21 +11,20 @@
 </head>
 <body>
   <button (click)="run()" type="button" class="btn btn-primary" style="border-radius: 20px; margin-left:80px; margin-top: 40px;;">Run Reccomendation</button>
-  <div *ngIf="showSimilarity">
-    <table class="table">
+    <table class="table"  *ngIf="showSimilarity" style="margin-top: 30px;">
       <thead>
         <tr>
-          <th scope="col"></th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor= "let item of data">
-          <td>{{item.text}}</td>
+        <tr *ngFor= "let item of list">
+          <td>
+            {{item.text}}<br><br>
+            Similarity : {{(1- item.similarity_distance) * 100 | round }}%
+          </td>
         </tr>
       </tbody>
     </table>
-     
-    </div>
     
   
 </body>
