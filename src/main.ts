@@ -8,8 +8,6 @@ import {AppModule} from "./app/app.module";
 /* global console, document, Office */
 
 Office.initialize = () => {
-  document.getElementById("sideload-msg").style.display = "none";
-
   // Bootstrap the app
   platformBrowserDynamic()
     .bootstrapModule(AppModule)
