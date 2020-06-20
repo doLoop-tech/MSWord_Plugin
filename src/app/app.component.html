@@ -12,15 +12,18 @@
 <body>
   <button (click)="run()" type="button" class="btn btn-primary" style="border-radius: 20px; margin-left:80px; margin-top: 40px;;">Run Reccomendation</button>
   <div *ngIf="showSimilarity">
-    <div *ngFor="let res of data;">
-      <div class="card">
-        <div class="card-body">
-          <p class="card-text">
-            {{res.text}}
-          </p>
-        </div>
-      </div>
-    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor= "let item of data">
+          <td>{{item.text}}</td>
+        </tr>
+      </tbody>
+    </table>
      
     </div>
     
