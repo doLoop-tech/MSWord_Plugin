@@ -8,12 +8,15 @@ if (environment.production) {
   enableProdMode();
 }
 
-Office.initialize = () => {
-  document.getElementById("sideload-msg").style.display = "none";
+Office.onReady(()=>{
+  Office.initialize = () => {
+    document.getElementById("sideload-msg").style.display = "none";
+    // Bootstrap the app
+    platformBrowserDynamic()
+      .bootstrapModule(AppModule)
+      .catch(error => console.error(error));
+  };
+})
 
-  // Bootstrap the app
-  platformBrowserDynamic()
-    .bootstrapModule(AppModule)
-    .catch(error => console.error(error));
-};
+
 
