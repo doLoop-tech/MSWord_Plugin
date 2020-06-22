@@ -11,7 +11,8 @@ export class ContentService {
     
   }
 
-  private url = "http://localhost:8000/"
+  
+  private url = "https://litera-demo.dolooptech.com/msword_addin/"
 
   public getContent(text):Observable<any>{
 

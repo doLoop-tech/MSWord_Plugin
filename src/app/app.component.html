@@ -10,8 +10,25 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
-  <button (click)="run()" type="button" class="btn btn-primary" style="border-radius: 20px; margin-left:80px; margin-top: 40px;;">Run Reccomendation</button>
-    <table class="table"  *ngIf="showSimilarity" style="margin-top: 30px;">
+  <button (click)="run()" type="button" class="btn btn-primary" style="border-radius: 20px; margin-left:80px; margin-top: 40px;;">Run Reccomendation</button>  
+  <button (click)="hide()"  *ngIf="showDiff" type="button" class="btn btn-primary text-center" style="width: 100px; margin-left:115px ;margin-top:40px">Back</button>
+  <hr  *ngIf="showDiff">
+  <div *ngIf="showDiff" style="padding: 10px; margin-top: 20px;">
+    <b> Input Text :</b><br><br>
+    {{data.input_text}}
+  </div>
+  <hr  *ngIf="showDiff">
+  <div *ngIf="showDiff" style="padding: 10px;">
+    <b>Compared Text :</b><br><br>
+    {{selectedText}}
+  </div>
+  <hr  *ngIf="showDiff">
+  <p *ngIf="showDiff" style="margin-left:10px">    
+    <b>Comparison:</b>
+  </p>
+  <div id="text" style="padding: 10px;"></div>
+  <hr  *ngIf="showDiff">
+  <table class="table"  *ngIf="showSimilarity" style="margin-top: 30px;">
       <thead>
         <tr>
         </tr>
@@ -20,12 +37,11 @@
         <tr *ngFor= "let item of list">
           <td>
             {{item.text}}<br><br>
-            Similarity : {{(1- item.similarity_distance) * 100 | round }}%
+            Similarity : {{(1- item.similarity_distance) * 100 | round }}%<br>
+            <button (click)="show(item.text)" type="button" class="btn btn-primary" style="width: 100px;">Compare</button>
           </td>
         </tr>
       </tbody>
-    </table>
-    
-  
+    </table> 
 </body>
 </html>
