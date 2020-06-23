@@ -4,7 +4,7 @@
   <Version>1.0.0.0</Version>
   <ProviderName>Contoso</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Content Similarity"/>
+  <DisplayName DefaultValue="doLoop | Clinical Content Similarity"/>
   <Description DefaultValue="A template to get started."/>
   <IconUrl DefaultValue="https://word-plugin.netlify.app/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://word-plugin.netlify.app/assets/icon-80.png"/>
@@ -70,14 +70,14 @@
         <bt:Url id="Taskpane.Url" DefaultValue="https://word-plugin.netlify.app/index.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GetStarted.Title" DefaultValue="Run our AI Engine!"/>
-        <bt:String id="CommandsGroup.Label" DefaultValue="doloop Tech Plugin"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Content-Similarity Recommendation Engine"/>
+        <bt:String id="GetStarted.Title" DefaultValue="Welcome to doLoop Clinical Content Similarity!"/>
+        <bt:String id="CommandsGroup.Label" DefaultValue="doLoop"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Clinical Content Similarity"/>
        <bt:String id="Menu.Label" DefaultValue="Run AI Engine"/>
 
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="GetStarted.Description" DefaultValue="Your sample add-in loaded succesfully. Go to the HOME tab and click the 'Show Taskpane' button to get started."/>
+        <bt:String id="GetStarted.Description" DefaultValue="Your doLoop add-in loaded succesfully. Go to the HOME tab and click the 'Show Taskpane' button to get started."/>
         <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to Show a Taskpane"/>
        <bt:String id="Menu.Tooltip" DefaultValue="Click to run the AI Engine"/>
       </bt:LongStrings>

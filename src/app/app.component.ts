@@ -34,6 +34,7 @@ export class AppComponent implements OnInit{
    run() {
      this.showSimilarity = true;
      this.showDiff = false;
+     document.getElementById("text").innerHTML = "<p></p>"
      Word.run((context)=>{
       Office.context.document.getSelectedDataAsync(Office.CoercionType.Text , (result)=>{
         this.text = result.value;
