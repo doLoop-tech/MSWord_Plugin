@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import {APP_BASE_HREF} from '@angular/common';
 import{HttpClientModule} from '@angular/common/http';
 import{DiffMatchPatchModule} from 'ng-diff-match-patch';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 
 
 
@@ -19,7 +21,9 @@ import { RoundPipe } from './pipes/round.pipe';
   imports: [
     BrowserModule,
     HttpClientModule,
-    DiffMatchPatchModule
+    DiffMatchPatchModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [{provide: APP_BASE_HREF, useValue: '/'}],
   bootstrap: [AppComponent]
