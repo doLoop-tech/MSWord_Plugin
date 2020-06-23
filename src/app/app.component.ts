@@ -38,9 +38,9 @@ export class AppComponent implements OnInit{
     })
   }
   ngOnInit(){
+    this.dmp = new DiffMatchPatch();
     if(localStorage.getItem("token")){
       this.showSimilarity = false;
-      this.dmp = new DiffMatchPatch();
       document.getElementById("text").innerHTML = "<p></p>"
       this.content.getProfile().subscribe((data)=>{
         this.zone.run(()=>{
@@ -121,6 +121,8 @@ export class AppComponent implements OnInit{
           this.failure = false;
           localStorage.setItem("token" , this.token.token);
           this.showLogin = false;
+          this.showDiff = false;
+          document.getElementById("text").innerHTML = "<p></p>"
           this.showSimilarity = true;
           this.content.getProfile().subscribe((data)=>{
             this.zone.run(()=>{
@@ -147,6 +149,8 @@ export class AppComponent implements OnInit{
        this.showLogin = true;
        this.showDiff = false;
        this.showSimilarity = false;
+       document.getElementById("text").innerHTML = "<p></p>"
+
   }
  
 }
